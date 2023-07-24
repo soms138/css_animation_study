@@ -14,12 +14,21 @@
         main #btn {cursor: pointer;}
         /* 1. 버튼에 마우스 올렸을 때 target1 배경색 변경 */
         main #btn:hover + .target1 {background: lightcoral;}
-        main span {background: lightgray; padding: 10px;}
-        main .target1 {}
-        main .target2 {}
-        main .target3 {}
+        main span {width: 100px; height: 100px; background: lightgray; padding: 10px;}
+        main .target1 {transition: background 1s 0.5s;}
+        main .target2 {animation: right500 2s linear;}
+        main .target3 {animation: right500 0.5s linear 4 alternate;}
         main .target4 {}
         main .target5 {}
+        /* animation + @keyframes */
+        @keyframes right500 {
+            0% {transform: translateX(0);}
+            100% {transform: translateX(500px);}
+        }
+        /* @keyframes 작성위치 style 맨 아래 또는 외부스타일 분리 */
+        /* 1. 원하는 애니메이션 시작-끝 장면 정하기 */
+        /* 2. 해당 장면에 어울리는 이름으로 keyframes 생성 */
+        /* 3. 적용 대상에 animation 속성으로 keyfames 불러오기 */
     </style>
 </head>
 <body>
