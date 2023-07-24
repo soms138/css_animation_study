@@ -61,16 +61,34 @@
             display:flex; justify-content: space-between; align-items:center;
         }
         main .center h1 {color:#fff; display:flex; flex-flow:column nowrap; justify-content: space-between;}
-        main .center h1 span {font-size:3.5rem; letter-spacing:-2.5px; padding:10px 0;}
+        main .center h1 span {color:#fff; font-size:3.5rem; letter-spacing:-2.5px; padding:10px 0;}
+        main .center h1 span:first-child {animation: text 0.5s linear both;}
+        main .center h1 span:last-child {animation: text 0.5s 0.5s linear both;}
         main .center .right {
-            position:relative; right:174px; top:-100px;
+            position:relative; right:174px; top:-100px; animation: img_trans 1s ease both;
         }
         main .center .right span {
             position:absolute; width:174px; height:174px;
         }
-        main .center .right span:nth-child(1) {}
+        main .center .right span:nth-child(1) {animation: img_rotate 5s ease infinite both;}
         main .center .right span:nth-child(2) {text-align:center; line-height:174px;}
         /* animation */
+        @keyframes text {
+            0% {transform: translateY(30px); opacity: 0;}
+            100% {transform: translateY(0); opacity: 1;}
+        }
+        @keyframes img1 {
+            0% {transform: rotate(0) translateX(50px); opacity: 0;}
+            100% {transform: rotate(360deg) translateX(0); opacity: 1;}
+        }
+        @keyframes img_trans {
+            0% {transform: translateX(50px); opacity: 0;}
+            100% {transform: translateX(0); opacity: 1;}
+        }
+        @keyframes img_rotate {
+            0% {transform: rotate(0)}
+            100% {transform: rotate(360deg)}
+        }
     </style>
 </head>
 <body>

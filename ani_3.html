@@ -16,14 +16,25 @@
         main #btn:hover + .target1 {background: lightcoral;}
         main span {width: 100px; height: 100px; background: lightgray; padding: 10px;}
         main .target1 {transition: background 1s 0.5s;}
-        main .target2 {animation: right500 2s linear;}
-        main .target3 {animation: right500 0.5s linear 4 alternate;}
+        main .target2 {animation: right500 1s linear 3 alternate forwards;}
+        main .target3 {animation: left_top_right 3s linear 3 alternate both, opacity 3s linear 3 alternate both;}
         main .target4 {}
         main .target5 {}
         /* animation + @keyframes */
         @keyframes right500 {
             0% {transform: translateX(0);}
             100% {transform: translateX(500px);}
+        }
+        @keyframes left_top_right {
+            0% {transform: translate(0,0);}
+            25% {transform: translate(250px, -100px); background: lightpink;}
+            50% {transform: translate(500px,0);}
+            75% {transform: translate(750px,-100px); background: aqua;}
+            100% {transform: translate(1000px, 0);}
+        }
+        @keyframes opacity {
+            0% {opacity: 0; font-size: 1rem;}
+            100% {opacity: 1; font-size: 3rem;}
         }
         /* @keyframes 작성위치 style 맨 아래 또는 외부스타일 분리 */
         /* 1. 원하는 애니메이션 시작-끝 장면 정하기 */
