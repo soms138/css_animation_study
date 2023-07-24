@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>animation3</title>
+    <style>
+        main {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        main #btn {cursor: pointer;}
+        /* 1. 버튼에 마우스 올렸을 때 target1 배경색 변경 */
+        main #btn:hover + .target1 {background: lightcoral;}
+        main span {background: lightgray; padding: 10px;}
+        main .target1 {}
+        main .target2 {}
+        main .target3 {}
+        main .target4 {}
+        main .target5 {}
+    </style>
+</head>
+<body>
+    <main>
+        <button id="btn">적용버튼</button>
+        <span class="target1">1</span>
+        <span class="target2">2</span>
+        <span class="target3">3</span>
+        <span class="target4">4</span>
+        <span class="target5">5</span>
+    </main>
+</body>
+</html>
