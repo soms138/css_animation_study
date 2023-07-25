@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>text gradient animation</title>
+    <style>
+        h1 {
+            font-weight: 800;
+            font-size: 5rem;
+            text-transform: uppercase;/* 대문자 */
+            background: linear-gradient(90deg, white, pink, coral, skyblue, lime, white);
+            -webkit-background-clip: text; /* 클리핑마스크 같은 기능 */
+            -webkit-text-fill-color: transparent;
+            background-size: 400%;
+            animation: text_bg 10s linear alternate infinite;
+        }
+        @keyframes text_bg {
+            0% {background-position: 0 0;}
+            100% {background-position: 400% 0;}
+        }
+    </style>
+</head>
+<body>
+    <h1>text gradient animation</h1>
+</body>
+</html>

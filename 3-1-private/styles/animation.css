@@ -1,0 +1,13 @@
+/* @keyframes */
+@keyframes bg {
+    0% {background-position: 0 0;}
+    100% {background-position: 1000px 0;}
+}
+@keyframes wheel {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@keyframes cursor {
+    0% {transform: translateY(-30px);}
+    100% {transform: translateY(0);}
+}
